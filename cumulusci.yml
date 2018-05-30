@@ -1,0 +1,7 @@
+project:
+    name: EASY-Open-Source-Solution
+    package:
+        name:  EASY-Open-Source-Solution
+        api_version: '42.0'
+
+

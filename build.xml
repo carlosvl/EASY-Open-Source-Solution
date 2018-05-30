@@ -18,7 +18,14 @@
     </taskdef>
 
     <target name="deploy">
-      <sf:deploy username="${sf.username}" password="${sf.password}" sessionId="${sf.sessionId}" serverurl="${sf.serverurl}" maxPoll="${sf.maxPoll}" deployRoot="src" testLevel="RunSpecifiedTests" rollbackOnError="true">
+      <sf:deploy username="${sf.username}" 
+                 password="${sf.password}" 
+                 sessionId="${sf.sessionId}" 
+                 serverurl="${sf.serverurl}" 
+                 maxPoll="${sf.maxPoll}" 
+                 deployRoot="src" 
+                 testLevel="RunSpecifiedTests" 
+                 rollbackOnError="true">
          <runTest>ApplicationAdminViewTest</runTest>
          <runTest>ApplicationChecklistTest</runTest>
          <runTest>ApplicationCreateTest</runTest>
@@ -37,5 +44,16 @@
          <runTest>UserApplicationTriggerHandlerTest</runTest>
       </sf:deploy>
     </target>
+      <target name="validate">
+    <echo message="Validate Info:" />
+    <echo message="  user = ${sf.username}" />
+    <sf:deploy username="${sf.username}"
+               password="${sf.password}"
+               serverurl="${sf.serverurl}"
+               maxPoll="1000"
+               pollWaitMillis="10000" 
+               checkOnly="true"
+               deployRoot="src" />
+  </target>
   
 </project>

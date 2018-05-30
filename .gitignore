@@ -6,3 +6,4 @@ Referenced Packages
 build.properties
 .*.swp
 .DS_Store
+package copy.xml
