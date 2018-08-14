@@ -7,3 +7,5 @@ build.properties
 .*.swp
 .DS_Store
 package copy.xml
+test_results.json
+test_results.xml
