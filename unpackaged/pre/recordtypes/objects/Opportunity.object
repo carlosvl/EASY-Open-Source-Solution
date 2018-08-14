@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+
+    <businessProcesses>
+        <fullName>Applicant</fullName>
+        <isActive>true</isActive>
+        <values>
+            <fullName>Closed Lost</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed Won</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prospecting</fullName>
+            <default>false</default>
+        </values>
+    </businessProcesses>
+    <businessProcesses>
+        <fullName>Inquiry</fullName>
+        <isActive>true</isActive>
+        <values>
+            <fullName>Closed Lost</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed Won</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prospecting</fullName>
+            <default>false</default>
+        </values>
+    </businessProcesses>
+    <recordTypes>
+        <fullName>Applicant_Opportunity</fullName>
+        <active>true</active>
+        <businessProcess>Applicant</businessProcess>
+        <label>Applicant Opportunity</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Inquiry_Opportunity</fullName>
+        <businessProcess>Inquiry</businessProcess>
+        <active>true</active>
+        <label>Inquiry Opportunity</label>
+
+    </recordTypes>
+</CustomObject>
